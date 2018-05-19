@@ -84,3 +84,20 @@ docker push username/repository:tag            # Upload tagged image to registry
 docker run username/repository:tag                   # Run image from a registry
 ```
 
+
+## All
+
+```
+#List all containers (only IDs) 
+docker ps -aq.
+
+#Stop all running containers. 
+docker stop $(docker ps -aq)
+
+#Remove all containers. 
+docker rm $(docker ps -aq)
+
+#Remove all images. 
+docker rmi $(docker images -q)
+
+```
